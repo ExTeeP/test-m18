@@ -1,0 +1,61 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	min-width: $mobile-width;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-family: $font-main;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+	background-color: #fff;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	width: $desktop-width;
+	margin: 0 auto;
+	padding: $desktop-padding;
+}
+
+.container--full-screen {
+	width: $full-screen-width;
+}
+
+// @media (min-width: $tablet-width) {
+// 	.container {
+// 		width: $tablet-width;
+// 		padding: $tablet-padding;
+// 	}
+// }
+
+// @media (min-width: $desktop-width) {
+// 	.container {
+// 		width: $desktop-width;
+// 		padding: $desktop-padding;
+// 	}
+// }
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

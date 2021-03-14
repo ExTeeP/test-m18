@@ -1,0 +1,120 @@
+.carusel {
+	padding-top: 52px;
+	overflow: hidden;
+
+	&__inner {
+	}
+
+	&__description {
+		margin-bottom: 50px;
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__slides {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+	}
+
+	&__slide {
+	}
+
+	&__slide figure {
+		margin: 0;
+		display: flex;
+	}
+
+	&__slide figcaption {
+		width: 230px;
+		padding-left: 18px;
+		padding-right: 55px;
+		font-size: 13px;
+		line-height: 20px;
+		color: #666666;
+	}
+
+	&__slide img,
+	&__slide picture{
+		width: 750px;
+		height: 500px;
+		object-fit: cover;
+	}
+
+	&__nav {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 20px;
+		position: absolute;
+		bottom: -8px;
+		right: 65px;
+		list-style: none;
+	}
+
+	&__nav-item {
+	}
+
+	&__nav-button {
+		padding: 0;
+		width: 34px;
+		height: 56px;
+		position: relative;
+		border: none;
+		background-color: transparent;
+	}
+
+	&__nav-button::before {
+		content: "";
+		width: 24px;
+		height: 46px;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+
+	&__nav-button--prev::before {
+		background-image: url("../img/icon-arrow-left.svg");
+	}
+
+	&__nav-button--next::before {
+		background-image: url("../img/icon-arrow-right.svg");
+	}
+
+	&__nav-button--prev:hover::before {
+		top: 10px;
+		background-image: url("../img/icon-arrow-left-hover.svg");
+		animation: left 1.2s infinite;
+	}
+
+	&__nav-button--next:hover::before {
+		top: 10px;
+		background-image: url("../img/icon-arrow-right-hover.svg");
+		animation: right 1.2s infinite;
+	}
+
+	@keyframes right {
+		from {
+			left: 5;
+		}
+		to {
+			opacity: 0.1;
+			left: 30px;
+		}
+	}
+
+	@keyframes left {
+		from {
+			left: 5;
+		}
+		to {
+			opacity: 0.1;
+			left: -30px;
+		}
+	}
+}
