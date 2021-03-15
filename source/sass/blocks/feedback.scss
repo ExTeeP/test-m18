@@ -1,0 +1,64 @@
+.feedback {
+	padding-top: 100px;
+	padding-bottom: 133px;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: 4px solid #63D2C1;
+	}
+
+	&__description {
+		margin-top: -40px;
+		margin-bottom: 32px;
+		padding: 15px;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__description .title {
+		margin-bottom: 53px;
+	}
+
+	&__subtitle {
+		color: #000;
+		padding-left: 58px;
+		position: relative;
+	}
+
+	&__subtitle::before {
+		content: "";
+		display: block;
+		width: 46px;
+		height: 69px;
+		position: absolute;
+		top: -14px;
+		left: -5px;
+		background-image: url("../img/icon-door.svg");
+		background-repeat: no-repeat;
+	}
+
+	&__form {
+		width: 500px;
+		padding-bottom: 22px;
+	}
+
+	&__footer {
+		padding-bottom: 55px;
+		display: flex;
+		flex-direction: column;
+		font-size: 13px;
+		line-height: 20px;
+		text-align: center;
+		color: #666666;
+	}
+
+	a {
+		text-decoration: none;
+		color: #F9572E;
+	}
+}

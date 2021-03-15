@@ -1,0 +1,59 @@
+.form {
+	display: flex;
+	flex-direction: column;
+
+	&__list {
+		margin: 0;
+		margin-bottom: 18px;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item {
+		margin-bottom: 28px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	&__item label {
+		padding: 0 7px;
+		display: block;
+		position: absolute;
+		top: -12px;
+		left: 20px;
+		background-color: #fff;
+		font-size: 13px;
+		line-height: 24px;
+		color: #F9572E;
+		opacity: 0;
+	}
+
+	&__item:focus-within label {
+		opacity: 1;
+		transition: 0.2s;
+	}
+
+	&__item input {
+		padding: 18px 25px;
+		border: 1px solid #CCCCCC;
+		border-radius: 4px;
+		font-size: 18px;
+		line-height: 24px;
+		color: #666;
+	}
+
+
+	&__item input:hover {
+		border-color: #666;
+	}
+
+	&__item input:focus {
+		outline: none;
+		border-color: #F9572E;
+	}
+
+	&__button {
+		align-self: center;
+	}
+}

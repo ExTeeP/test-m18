@@ -1,0 +1,78 @@
+.contacts {
+	padding-top: 55px;
+	font-size: 21px;
+	line-height: 30px;
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	&__item {
+		text-align: center;
+	}
+
+	&__item a {
+		padding: 10px;
+		color: inherit;
+		text-decoration: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__item--icon a {
+		padding-left: 40px;
+		position: relative;
+	}
+
+	&__item--icon a[href^="tel:"]::before {
+		content: "";
+		display: block;
+		width: 26px;
+		height: 26px;
+		position: absolute;
+		top: 9px;
+		left: 5px;
+		background-image: url("../img/icon-call.svg");
+		background-repeat: no-repeat;
+	}
+
+	&__item--icon a[href^="mailto:"]::before {
+		content: "";
+		display: block;
+		width: 32px;
+		height: 22px;
+		position: absolute;
+		top: 13px;
+		left: 0;
+		background-image: url("../img/icon-mail.svg");
+		background-repeat: no-repeat;
+	}
+
+	&__item--icon a[href^="mailto:"]::after {
+		content: "";
+		width: 100%;
+		height: 2px;
+		display: block;
+		background-color: #F9572E;
+	}
+
+	&__item span {
+		font-size: 16px;
+		line-height: 24px;
+		color: #666;
+		display: block;
+	}
+
+
+	&__item a:focus,
+	&__item a:hover {
+		color: rgb(249, 87, 46);
+		transition: 0.2s;
+	}
+}

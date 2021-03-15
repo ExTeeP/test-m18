@@ -1,7 +1,7 @@
 .button {
-	min-width: 260px;
+	min-width: 250px;
 	height: 51px;
-	padding: 0 20px;
+	padding: 0 30px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -13,6 +13,7 @@
 	background-color: rgb(249, 87, 46);
 	box-shadow: 0px 7px 15px rgba(249, 87, 46, 0.6);
 	border: none;
+	cursor: pointer;
 }
 
 .button:focus,

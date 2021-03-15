@@ -2,13 +2,20 @@
 @import "./fonts";
 @import "./variables";
 @import "./global";
+@import "./sr-only";
 
 // BEM blocks
 @import "./blocks/page";
 @import "./blocks/title";
 @import "./blocks/subtitle";
 @import "./blocks/button";
+@import "./blocks/form";
 @import "./blocks/header";
 @import "./blocks/greeting";
 @import "./blocks/advantages";
 @import "./blocks/carusel";
+@import "./blocks/feedback";
+@import "./blocks/footer";
+@import "./blocks/social";
+@import "./blocks/contacts";
+@import "./blocks/copyright";

@@ -1,14 +1,11 @@
 .header {
 
 	&__inner {
-		width: 100%;
 		padding-top: 48px;
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
-		position: absolute;
-		top: 0;
-		left: 0;
+		position: relative;
 		z-index: 4;
 	}
 
@@ -63,15 +60,9 @@
 		left: 6px;
 	}
 
-
 	&__nav-item:focus,
 	&__nav-item:hover {
 		color: rgb(249, 87, 46);
-		;
-	}
-
-	&__nav-item:focus path,
-	&__nav-item:hover path {
 		transition: 0.2s;
 	}
 }
