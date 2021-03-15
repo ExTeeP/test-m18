@@ -13,11 +13,11 @@
 <body>
 
 	<header class="header">
-		<div class="container">
+		<div class="container container--full-screen">
 			<div class="header__inner">
 
 				<div class="header__logo">
-					<a class="header__logo-link" href="/">
+					<a class="header__logo-link">
 						<img class="header__logo-img" width="200" height="55" src="./img/logotype.svg" alt="Логотип компании" />
 					</a>
 				</div>
@@ -58,38 +58,46 @@
 						<a class="button" href="#">Узнайте о запуске первым</a>
 						<span class="greeting__start-info">Старт весной 2016</span>
 					</div>
-
-					<a class="greeting__play-btn" href="#">
-						<svg width="255" height="255" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="127.962" cy="127" r="125" stroke="url(#paint0_linear)" stroke-width="4"
-								stroke-linecap="round" stroke-linejoin="round" />
-							<path class="default" fill-rule="evenodd" clip-rule="evenodd"
-								d="M88.063 66.663L197.438 129.81L88.063 192.958V66.663V66.663Z" stroke="url(#paint1_linear)"
-								stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-							<path class="hover" clip-rule="evenodd" d="M78.712 54.755l130 75.055-130 75.056V54.755v0z"
-								stroke="url(#paint1_linear)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-							<defs>
-								<linearGradient id="paint0_linear" x1=".962" y1="-91" x2="254.962" y2="-91"
-									gradientUnits="userSpaceOnUse">
-									<stop offset="0" stop-color="#FA9685" />
-									<stop offset="1" stop-color="#F9572E" />
-								</linearGradient>
-								<linearGradient id="paint1_linear" x1="76.712" y1="-21524.4" x2="210.712" y2="-21524.4"
-									gradientUnits="userSpaceOnUse">
-									<stop offset="0" stop-color="#FA9685" />
-									<stop offset="1" stop-color="#F9572E" />
-								</linearGradient>
-							</defs>
-						</svg>
-						<span>Смотреть видео</span>
-					</a>
-
 					<div class="greeting__scroll-btn">
 						<a href="#advantages">Листайте вниз,<br /> чтобы ничего не упустить</a>
 					</div>
 
-				</div>
+					<div class="greeting__poster">
+						<picture>
+							<source type="image/webp"
+								srcset="./img/promo-video-poster@1x.webp 1x, ./img/promo-video-poster@2x.webp 2x" />
+							<img src="./img/promo-video-poster@1x.png" srcset="./img/promo-video-poster@2x.png 2x" width="940"
+								height="920" alt="Рабочее место в эко-стиле" />
+						</picture>
 
+						<a class="greeting__play-btn" href="#">
+							<svg width="255" height="255" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="127.962" cy="127" r="125" stroke="url(#paint0_linear)" stroke-width="4"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path class="default" fill-rule="evenodd" clip-rule="evenodd"
+									d="M88.063 66.663L197.438 129.81L88.063 192.958V66.663V66.663Z" stroke="url(#paint1_linear)"
+									stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+								<path class="hover" clip-rule="evenodd" d="M78.712 54.755l130 75.055-130 75.056V54.755v0z"
+									stroke="url(#paint1_linear)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+								<defs>
+									<linearGradient id="paint0_linear" x1=".962" y1="-91" x2="254.962" y2="-91"
+										gradientUnits="userSpaceOnUse">
+										<stop offset="0" stop-color="#FA9685" />
+										<stop offset="1" stop-color="#F9572E" />
+									</linearGradient>
+									<linearGradient id="paint1_linear" x1="76.712" y1="-21524.4" x2="210.712" y2="-21524.4"
+										gradientUnits="userSpaceOnUse">
+										<stop offset="0" stop-color="#FA9685" />
+										<stop offset="1" stop-color="#F9572E" />
+									</linearGradient>
+								</defs>
+							</svg>
+							<span>Смотреть видео</span>
+						</a>
+
+					</div>
+
+				</div>
 			</div>
 		</section>
 
@@ -137,22 +145,22 @@
 					</div>
 
 					<div class="carusel__content">
-						<ul class="carusel__slides">
+						<ul class="carusel__slides carusel__slides--slide-2">
 							<li class="carusel__slide">
 								<figure>
 									<picture>
-										<source type="image/webp" srcset="img/slide-01@1x.webp 1x, img/slide-01@2x.webp 2x" />
-										<img src="./img/slide-01@1x.jpg" srcset="./img/slide-01@2x 2x" width="750" height="500"
+										<source type="image/webp" srcset="./img/slide-01@1x.webp 1x, ./img/slide-01@2x.webp 2x" />
+										<img src="./img/slide-01@1x.jpg" srcset="./img/slide-01@2x.jpg 2x" width="750" height="500"
 											alt="Гостинная в скандинавском стиле" />
 									</picture>
 									<figcaption>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</figcaption>
 								</figure>
 							</li>
-							<li class="carusel__slide">
+							<li class="carusel__slide carusel__slide-active">
 								<figure>
 									<picture>
-										<source type="image/webp" srcset="img/slide-02@1x.webp 1x, img/slide-02@2x.webp 2x" />
-										<img src="./img/slide-02@1x.jpg" srcset="./img/slide-02@2x 2x" width="750" height="500"
+										<source type="image/webp" srcset="./img/slide-02@1x.webp 1x, ./img/slide-02@2x.webp 2x" />
+										<img src="./img/slide-02@1x.jpg" srcset="./img/slide-02@2x.jpg 2x" width="750" height="500"
 											alt="Ванная комната в скандинавском стиле" />
 									</picture>
 									<figcaption>Кафельная плитка в&nbsp;ванной комнате в&nbsp;скандинавском стиле.</figcaption>
@@ -161,8 +169,8 @@
 							<li class="carusel__slide">
 								<figure>
 									<picture>
-										<source type="image/webp" srcset="img/slide-03@1x.webp 1x, img/slide-03@2x.webp 2x" />
-										<img src="./img/slide-03@1x.jpg" srcset="./img/slide-03@2x 2x" width="750" height="500"
+										<source type="image/webp" srcset="./img/slide-03@1x.webp 1x, ./img/slide-03@2x.webp 2x" />
+										<img src="./img/slide-03@1x.jpg" srcset="./img/slide-03@2x.jpg 2x" width="750" height="500"
 											alt="Кухня в скандинавском стиле" />
 									</picture>
 									<figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, fuga.</figcaption>
@@ -183,8 +191,89 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="feedback" id="feedback">
+			<div class="container">
+				<div class="feedback__inner">
+					<div class="feedback__description">
+						<h2 class="title">Узнайте о запуске сервиса первым</h2>
+						<p class="subtitle feedback__subtitle">Первым 10 клиентам стальная <br /> входная дверь в подарок</p>
+					</div>
+
+					<form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="GET">
+						<ul class="form__list">
+							<li class="form__item">
+								<label for="name">Имя и фамилия*</label>
+								<input type="text" name="name" id="name" placeholder="Имя и фамилия*" required>
+							</li>
+							<li class="form__item">
+								<label for="email">Е-mail адрес*</label>
+								<input type="email" name="email" id="email" placeholder="Е-mail адрес*" required>
+							</li>
+							<li class="form__item">
+								<label for="phone">Телефон</label>
+								<input type="tel" name="tel" id="phone" placeholder="Телефон">
+							</li>
+						</ul>
+
+						<button class="form__button button" type="submit">Подписаться</button>
+					</form>
+
+					<footer class="feedback__footer">
+						<span>* Обязательные для заполнения поля</span>
+						<a href="#">Политика конфиденциальности</a>
+					</footer>
+				</div>
+			</div>
+		</section>
 	</main>
 
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+
+				<div class="social">
+					<div class="social__description">
+						<h2 class="title social__title">Следите за нашим развитием</h2>
+						<p class="subtitle social__subtitle">Подпишитесь на наши аккаунты в соц. сетях, знакомьтесь <br /> с нашими
+							проектами и тем, что нас вдохновляет</p>
+					</div>
+
+					<ul class="social__list">
+						<li class="social__item">
+							<a class="social__link social__link--fb" href="#" aria-label="Фейсбук"></a>
+						</li>
+						<li class="social__item">
+							<a class="social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
+						</li>
+						<li class="social__item">
+							<a class="social__link social__link--inst" href="#" aria-label="Инстаграм"></a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="contacts" id="contacts">
+					<ul class="contacts__list">
+						<li class="contacts__item contacts__item--icon">
+							<a href="tel:+78129035445">+7 (812) 903-54-45</a>
+						</li>
+						<li class="contacts__item">
+							<div>Ул. Галерная, д 55, <span>Санкт-Петербург</span></div>
+						</li>
+						<li class="contacts__item contacts__item--icon">
+							<a href="mailto:9035445@gmail.com">9035445@gmail.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="copyright">
+			<span>© FIX Ремонт, 2016</span>
+		</div>
+	</footer>
+
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
