@@ -55,7 +55,7 @@
 					</div>
 
 					<div class="greeting__content">
-						<a class="button" href="#">Узнайте о запуске первым</a>
+						<a class="button" href="#feedback">Узнайте о запуске первым</a>
 						<span class="greeting__start-info">Старт весной 2016</span>
 					</div>
 					<div class="greeting__scroll-btn">
@@ -145,7 +145,7 @@
 					</div>
 
 					<div class="carusel__content">
-						<ul class="carusel__slides carusel__slides--slide-2">
+						<ul class="carusel__slides">
 							<li class="carusel__slide">
 								<figure>
 									<picture>
@@ -156,7 +156,7 @@
 									<figcaption>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</figcaption>
 								</figure>
 							</li>
-							<li class="carusel__slide carusel__slide-active">
+							<li class="carusel__slide carusel__slide--active">
 								<figure>
 									<picture>
 										<source type="image/webp" srcset="./img/slide-02@1x.webp 1x, ./img/slide-02@2x.webp 2x" />
@@ -200,7 +200,7 @@
 						<p class="subtitle feedback__subtitle">Первым 10 клиентам стальная <br /> входная дверь в подарок</p>
 					</div>
 
-					<form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="GET">
+					<form class="feedback__form form" action="#" method="GET">
 						<ul class="form__list">
 							<li class="form__item">
 								<label for="name">Имя и фамилия*</label>
@@ -216,13 +216,14 @@
 							</li>
 						</ul>
 
-						<button class="form__button button" type="submit">Подписаться</button>
+						<footer class="form__footer">
+							<span>* Обязательные для заполнения поля</span>
+							<a href="#">Политика конфиденциальности</a>
+						</footer>
+
+						<button class="form__button button" type="submit" id="feedback-submit">Подписаться</button>
 					</form>
 
-					<footer class="feedback__footer">
-						<span>* Обязательные для заполнения поля</span>
-						<a href="#">Политика конфиденциальности</a>
-					</footer>
 				</div>
 			</div>
 		</section>
