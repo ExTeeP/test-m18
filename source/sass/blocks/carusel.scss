@@ -20,17 +20,15 @@
 		list-style: none;
 		display: flex;
 		position: relative;
-	}
-
-	&__slides--slide-2 {
 		left: -980px;
+		transition: 1s;
 	}
 
 	&__slide {
 		opacity: 0.6;
 	}
 
-	&__slide-active {
+	&__slide--active {
 		opacity: 1;
 	}
 
@@ -59,24 +57,33 @@
 		margin: 0;
 		padding: 0;
 		display: flex;
-		gap: 20px;
 		position: absolute;
 		bottom: -8px;
-		right: 65px;
+		right: 45px;
 		list-style: none;
 		z-index: 10;
 	}
 
-	&__nav-item {
+	&__nav-item:first-child {
+		margin-right: 20px;
 	}
 
 	&__nav-button {
+		box-sizing: content-box;
 		padding: 0;
 		width: 34px;
 		height: 56px;
 		position: relative;
 		border: none;
 		background-color: transparent;
+	}
+
+	&__nav-button--prev {
+		padding-left: 20px;
+	}
+
+	&__nav-button--next {
+		padding-right: 20px;
 	}
 
 	&__nav-button::before {
@@ -92,6 +99,7 @@
 
 	&__nav-button--prev::before {
 		background-image: url("../img/icon-arrow-left.svg");
+		left: 25px;
 	}
 
 	&__nav-button--next::before {
@@ -110,23 +118,43 @@
 		animation: right 1.2s infinite;
 	}
 
-	@keyframes right {
-		from {
-			left: 5;
-		}
-		to {
-			opacity: 0.1;
-			left: 30px;
-		}
+	&__nav-button--disabled {
+		opacity: 0.5;
 	}
 
-	@keyframes left {
-		from {
-			left: 5;
-		}
-		to {
-			opacity: 0.1;
-			left: -30px;
-		}
+	&__nav-button--disabled:hover::before {
+		animation: none;
+		cursor: not-allowed;
+	}
+
+	&__nav-button--prev.carusel__nav-button--disabled:hover::before {
+		top: 5px;
+		background-image: url("../img/icon-arrow-left.svg");
+	}
+
+	&__nav-button--next.carusel__nav-button--disabled:hover::before {
+		top: 5px;
+		background-image: url("../img/icon-arrow-right.svg");
+	}
+
+}
+
+@keyframes right {
+	from {
+		left: 5;
+	}
+	to {
+		opacity: 0.1;
+		left: 30px;
+	}
+}
+
+@keyframes left {
+	from {
+		left: 25;
+	}
+	to {
+		opacity: 0.1;
+		left: -5px;
 	}
 }
