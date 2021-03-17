@@ -1,3 +1,5 @@
+'use strict';
+
 // Слайдер
 (function () {
 	const caruselSection = document.querySelector('.carusel');
@@ -6,7 +8,7 @@
 	const caruselBtnPrev = caruselSection.querySelector('.carusel__nav-button--prev');
 	const caruselBtnNext = caruselSection.querySelector('.carusel__nav-button--next');
 
-	const stepValue = 980;
+	const stepValue = caruselItems[0].clientWidth;
 	const minTrackValue = 0;
 	const maxTrackValue = (caruselItems.length - 1) * stepValue;
 
@@ -105,4 +107,39 @@
 	};
 
 	feedbackForm.addEventListener('submit', onFormSubmit)
+})();
+
+// Переключатель меню
+(function () {
+  const siteHeader = document.querySelector('.header');
+  const switchButton = siteHeader.querySelector('.header__switch');
+  const siteHeaderMenu = siteHeader.querySelector('.header__menu');
+
+  switchButton.classList.remove('header__switch--nojs');
+  siteHeaderMenu.classList.remove('header__menu--nojs');
+
+  const changeButtonLabel = () => {
+    if (switchButton.classList.contains('header__switch--close')) {
+      switchButton.children[0].innerText = 'Закрыть меню';
+    } else {
+      switchButton.children[0].innerText = 'Открыть меню';
+    }
+  }
+
+  const toggleSiteMenu = () => {
+    siteHeaderMenu.classList.toggle('header__menu--opened');
+    siteHeaderMenu.classList.toggle('header__menu--closed');
+    switchButton.classList.toggle('header__switch--open');
+    switchButton.classList.toggle('header__switch--close');
+  }
+
+  switchButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    toggleSiteMenu();
+  });
+
+  switchButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    changeButtonLabel();
+  });
 })();
