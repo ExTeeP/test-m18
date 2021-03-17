@@ -31,20 +31,31 @@ img {
 	padding: $desktop-padding;
 }
 
-.container--full-screen {
-	width: $full-screen-width;
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+	.container {
+		width: 100%;
+		padding: $mobile-padding;
+	}
 }
 
-// @media (min-width: $tablet-width) {
-// 	.container {
-// 		width: $tablet-width;
-// 		padding: $tablet-padding;
-// 	}
-// }
+@media (min-width: $tablet-width) {
+	.container {
+		width: $tablet-width;
+		padding: $tablet-padding;
+	}
+}
 
-// @media (min-width: $desktop-width) {
-// 	.container {
-// 		width: $desktop-width;
-// 		padding: $desktop-padding;
-// 	}
-// }
+@media (min-width: $desktop-width) {
+	.container {
+		width: $desktop-width;
+		padding: $desktop-padding;
+	}
+}
+
+@media (min-width: $full-screen-width) {
+	.container-hd {
+		width: $full-screen-width;
+		margin: 0 auto;
+		padding: $desktop-padding;
+	}
+}

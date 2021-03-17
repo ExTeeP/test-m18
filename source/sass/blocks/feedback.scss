@@ -70,6 +70,18 @@
 	}
 
 	&__form {
-		width: 500px;
+		width: 100%;
+		max-width: 500px;
+	}
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+	.feedback {
+		padding-top: 60px;
+		padding-bottom: 70px;
+
+		&__description .title {
+			text-align: center;
+		}
 	}
 }

@@ -33,3 +33,13 @@
 	background-color: rgb(56, 55, 55);
 	box-shadow: none;
 }
+
+@media (max-width: $laptop-width) {
+	.button {
+		min-width: 200px;
+		height: 44px;
+		font-size: 14px;
+		line-height: 16px;
+		padding: 0 25px;
+	}
+}

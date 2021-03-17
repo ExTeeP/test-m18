@@ -2,14 +2,17 @@
 
 	&__inner {
 		padding-top: 48px;
+		width: 100%;
+		max-width: 1880px;
 		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
-		position: relative;
+		position: absolute;
 		z-index: 4;
 	}
 
 	&__logo {
+		width: 200px;
 		margin: 0 110px;
 		line-height: 0;
 	}
@@ -18,9 +21,18 @@
 		display: inline-block;
 	}
 
-	&__nav {
+	&__nav-switch {
+		display: none;
+	}
+
+	&__menu {
+		display: block;
 		margin-left: auto;
 		margin-right: 100px;
+	}
+
+	&__nav {
+		padding: 0;
 	}
 
 	&__nav-list {
@@ -35,6 +47,7 @@
 
 	&__nav-item {
 		position: relative;
+		margin: 0;
 		margin-right: 20px;
 	}
 
@@ -64,5 +77,129 @@
 	&__nav-item:hover {
 		color: rgb(249, 87, 46);
 		transition: 0.2s;
+	}
+}
+
+@media (max-width: $laptop-width) {
+	.header {
+
+		&__inner {
+			padding-top: 30px;
+		}
+
+		&__logo {
+			width: 150px;
+		}
+
+		&__menu {
+			margin-right: 50px;
+		}
+
+		&__nav-list {
+			font-size: 16px;
+			line-height: 21px;
+		}
+	}
+}
+
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+	.header {
+
+		&__inner {
+			padding: 20px;
+			flex-direction: column;
+			position: relative;
+		}
+
+		&__row {
+			width: 100%;
+			display: flex;
+			align-items: center;
+		}
+
+		&__logo {
+			width: 113px;
+			margin: 0;
+		}
+
+		&__nav-switch {
+			display: block;
+			margin-left: auto;
+		}
+
+		&__switch {
+			padding: 0;
+			width: 25px;
+			height: 19px;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+			transition: 0.2s;
+		}
+
+		&__switch--open {
+			width: 25px;
+			height: 19px;
+			background-image: url("../img/icon-menu-open.svg");
+			background-repeat: no-repeat;
+		}
+
+		&__switch--close {
+			width: 19px;
+			height: 19px;
+			background-image: url("../img/icon-menu-close.svg");
+			background-repeat: no-repeat;
+		}
+
+		&__switch--nojs {
+			display: none;
+		}
+
+		&__menu {
+			height: 100vh;
+			position: absolute;
+			top: 80px;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin-right: 0;
+			overflow: hidden;
+			background-color: #fff;
+		}
+
+		&__menu--opened {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0);
+			transition: .4s;
+		}
+
+		&__menu--closed {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(100%);
+			transition: .4s;
+		}
+
+		&__menu--nojs {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0);
+			height: auto;
+			position: static;
+		}
+
+		&__nav-list {
+			flex-flow: column nowrap;
+			align-items: flex-end;
+		}
+
+		&__nav-item {
+			margin-right: 0;
+			margin-bottom: 20px;
+			padding-right: 20px;
+		}
 	}
 }

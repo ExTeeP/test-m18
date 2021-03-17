@@ -1,0 +1,29 @@
+@keyframes down {
+	from {
+		top: 0;
+	}
+	to {
+		opacity: 0.1;
+		top: 30px;
+	}
+}
+
+@keyframes right {
+	from {
+		left: 5;
+	}
+	to {
+		opacity: 0.1;
+		left: 30px;
+	}
+}
+
+@keyframes left {
+	from {
+		left: 25;
+	}
+	to {
+		opacity: 0.1;
+		left: -5px;
+	}
+}

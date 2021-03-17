@@ -14,30 +14,33 @@
 		font-family: $font-second;
 	}
 
-	&__title {
-	}
-
-	&__subtitle {
-	}
-
 	&__list {
 		margin: 0;
 		padding: 0;
 		margin-bottom: 50px;
 		list-style: none;
-		display: grid;
-		grid-template-columns: 450px 450px;
-		column-gap: 80px;
-		row-gap: 54px;
+		display: flex;
+		flex-flow: row wrap;
 	}
 
 	&__item {
+		margin-right: 80px;
+		margin-bottom: 58px;
 		padding-top: 32px;
 		padding-bottom: 28px;
+		width: 50%;
+		max-width: 450px;
 		display: flex;
 		flex-direction: column;
-		border: 4px solid transparent;
 		border-top: 4px solid #63D2C1;
+	}
+
+	&__item:nth-child(2n) {
+		margin-right: 0;
+	}
+	&__item:nth-last-child(1),
+	&__item:nth-last-child(2) {
+		margin-bottom: 0;
 	}
 
 	&__item h3 {
@@ -72,6 +75,66 @@
 		line-height: 60px;
 		color: #000;
 	}
+}
 
+@media (min-width: $mobile-width) and (max-width: $tablet-width) {
+	.advantages {
+		padding-top: 100px;
+		padding-bottom: 0px;
 
+		&__list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__item {
+			margin-right: 80px;
+			margin-bottom: 58px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			width: 100%;
+			max-width: 400px;
+		}
+
+		&__item:nth-child(2n) {
+			margin-right: 80px;
+		}
+		&__item:nth-last-child(1),
+		&__item:nth-last-child(2) {
+			margin-bottom: 58px;
+		}
+
+		&__item h3 {
+			font-size: 20px;
+			line-height: 26px;
+		}
+
+		&__item p {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		&__item--bordered p {
+			font-size: 48px;
+			line-height: 48px;
+		}
+	}
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+	.advantages {
+
+		&__item {
+			margin-right: auto;
+			margin-bottom: 58px;
+			padding-top: 32px;
+			padding-bottom: 28px;
+			width: 50%;
+			max-width: 330px;
+			display: flex;
+			flex-direction: column;
+			border-top: 4px solid #63D2C1;
+		}
+	}
 }

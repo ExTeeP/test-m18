@@ -1,4 +1,6 @@
 // Global style
+@import "normalize";
+@import "./animation";
 @import "./fonts";
 @import "./variables";
 @import "./global";
@@ -19,4 +21,3 @@
 @import "./blocks/social";
 @import "./blocks/contacts";
 @import "./blocks/copyright";
-// @import "./blocks/success-form";
