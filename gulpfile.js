@@ -15,7 +15,9 @@ gulp.task('css', () => {
 	return gulp.src('source/sass/main.scss')
 		.pipe(plumber())
 		.pipe(sourcemap.init())
-		.pipe(sass())
+		.pipe(sass({
+			includePaths: require("scss-resets").includePaths
+		}))
 		.pipe(postcss([ autoprefixer() ]))
 		.pipe(csso())
 		.pipe(rename('style.min.css'))
