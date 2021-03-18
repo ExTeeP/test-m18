@@ -149,3 +149,22 @@
 		changeButtonLabel();
 	});
 })();
+
+// Плавная прокрутка по якорям
+(function () {
+	const pageAnchors = document.querySelectorAll('a[href*="#"]');
+
+	pageAnchors.forEach((link) => {
+
+		link.addEventListener('click', (evt) => {
+				evt.preventDefault();
+
+				const blockID = link.getAttribute('href');
+				document.querySelector(`${blockID}`).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+
+		});
+	});
+})();
