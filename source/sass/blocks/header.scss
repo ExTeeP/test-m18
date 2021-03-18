@@ -168,7 +168,7 @@
 			background-image: url("../img/bg-menu@1x.png");
 			background-repeat: no-repeat;
 			background-position: bottom right;
-			// overflow-y: scroll;
+			overflow-y: scroll;
 
 			@media (min-resolution: $retina-dppx) {
 				background-image: url("../img/bg-menu@2x.png");
