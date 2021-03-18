@@ -31,7 +31,7 @@
 
 		@media (min-resolution: $retina-dppx) {
 			background-image: url("../img/promo-video-poster@2x.jpg");
-			background-size: 100vh auto;
+			background-size: 100% auto;
 		}
 	}
 
@@ -168,9 +168,6 @@
 		&__start-info {
 			font-size: 12px;
 			line-height: 20px;
-		}
-
-		&__play-btn {
 		}
 
 		&__play-btn > svg {
