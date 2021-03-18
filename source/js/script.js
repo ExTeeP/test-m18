@@ -111,35 +111,41 @@
 
 // Переключатель меню
 (function () {
-  const siteHeader = document.querySelector('.header');
-  const switchButton = siteHeader.querySelector('.header__switch');
-  const siteHeaderMenu = siteHeader.querySelector('.header__menu');
+	const page = document.body;
+	const siteHeader = document.querySelector('.header');
+	const switchButton = siteHeader.querySelector('.header__switch');
+	const siteHeaderMenu = siteHeader.querySelector('.header__menu');
 
-  switchButton.classList.remove('header__switch--nojs');
-  siteHeaderMenu.classList.remove('header__menu--nojs');
+	switchButton.classList.remove('header__switch--nojs');
+	siteHeaderMenu.classList.remove('header__menu--nojs');
 
-  const changeButtonLabel = () => {
-    if (switchButton.classList.contains('header__switch--close')) {
-      switchButton.children[0].innerText = 'Закрыть меню';
-    } else {
-      switchButton.children[0].innerText = 'Открыть меню';
-    }
-  }
+	const noScrollBody = () => {
+		page.classList.toggle('page__menu-open');
+	}
 
-  const toggleSiteMenu = () => {
-    siteHeaderMenu.classList.toggle('header__menu--opened');
-    siteHeaderMenu.classList.toggle('header__menu--closed');
-    switchButton.classList.toggle('header__switch--open');
-    switchButton.classList.toggle('header__switch--close');
-  }
+	const changeButtonLabel = () => {
+		if (switchButton.classList.contains('header__switch--close')) {
+			switchButton.children[0].innerText = 'Закрыть меню';
+		} else {
+			switchButton.children[0].innerText = 'Открыть меню';
+		}
+	}
 
-  switchButton.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    toggleSiteMenu();
-  });
+	const toggleSiteMenu = () => {
+		siteHeaderMenu.classList.toggle('header__menu--opened');
+		siteHeaderMenu.classList.toggle('header__menu--closed');
+		switchButton.classList.toggle('header__switch--open');
+		switchButton.classList.toggle('header__switch--close');
+		noScrollBody();
+	}
 
-  switchButton.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    changeButtonLabel();
-  });
+	switchButton.addEventListener('click', (evt) => {
+		evt.preventDefault();
+		toggleSiteMenu();
+	});
+
+	switchButton.addEventListener('click', (evt) => {
+		evt.preventDefault();
+		changeButtonLabel();
+	});
 })();

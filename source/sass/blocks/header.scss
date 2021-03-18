@@ -157,7 +157,7 @@
 
 		&__menu {
 			height: 100vh;
-			position: absolute;
+			position: fixed;
 			top: 80px;
 			right: 0;
 			bottom: 0;
@@ -165,6 +165,15 @@
 			margin-right: 0;
 			overflow: hidden;
 			background-color: #fff;
+			background-image: url("../img/bg-menu@1x.png");
+			background-repeat: no-repeat;
+			background-position: bottom right;
+			// overflow-y: scroll;
+
+			@media (min-resolution: $retina-dppx) {
+				background-image: url("../img/bg-menu@2x.png");
+				background-size: 500px auto;
+			}
 		}
 
 		&__menu--opened {
