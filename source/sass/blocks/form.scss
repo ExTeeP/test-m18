@@ -46,10 +46,10 @@
 		position: absolute;
 		top: -12px;
 		left: 20px;
-		background-color: #fff;
+		background-color: $color-background-main;
 		font-size: 13px;
 		line-height: 24px;
-		color: #F9572E;
+		color: $color-primary;
 		opacity: 0;
 	}
 
@@ -61,20 +61,20 @@
 	&__item input {
 		width: 100%;
 		padding: 18px 25px;
-		border: 1px solid #CCCCCC;
+		border: 1px solid $color-border-second;
 		border-radius: 4px;
 		font-size: 18px;
 		line-height: 24px;
-		color: #666;
+		color: $text-color-second;
 	}
 
 	&__item input:hover {
-		border-color: #666;
+		border-color: $color-border;
 	}
 
 	&__item input:focus {
 		outline: none;
-		border-color: #F9572E;
+		border-color: $color-primary;
 	}
 
 	&__footer {
@@ -83,12 +83,12 @@
 		font-size: 13px;
 		line-height: 20px;
 		text-align: center;
-		color: #666666;
+		color: $text-color-second;
 		order: 2;
 
 		a {
 			text-decoration: none;
-			color: #F9572E;
+			color: $color-primary;
 		}
 	}
 

@@ -66,7 +66,7 @@
 		margin-left: 30px;
 		font-size: 16px;
 		line-height: 24px;
-		color: #666666;
+		color: $text-color-second;
 	}
 
 	&__play-btn {
@@ -93,7 +93,7 @@
 		margin-top: 12px;
 		font-size: 21px;
 		line-height: 30px;
-		color: #F9572E;
+		color: $color-primary;
 	}
 
 	&__play-btn .hover {
@@ -119,7 +119,7 @@
 		display: inline-block;
 		position: relative;
 		line-height: 18px;
-		color: rgb(249, 87, 46);
+		color: $color-primary;
 		text-decoration: none;
 	}
 

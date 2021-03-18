@@ -75,7 +75,7 @@
 
 	&__nav-item:focus,
 	&__nav-item:hover {
-		color: rgb(249, 87, 46);
+		color: $color-primary;
 		transition: 0.2s;
 	}
 }
@@ -163,7 +163,7 @@
 			bottom: 0;
 			left: 0;
 			margin-right: 0;
-			background-color: #fff;
+			background-color: $color-background-main;
 			background-image: url("../img/bg-menu@1x.png");
 			background-repeat: no-repeat;
 			background-position: bottom right;
