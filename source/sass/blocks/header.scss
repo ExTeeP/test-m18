@@ -163,7 +163,6 @@
 			bottom: 0;
 			left: 0;
 			margin-right: 0;
-			overflow: hidden;
 			background-color: #fff;
 			background-image: url("../img/bg-menu@1x.png");
 			background-repeat: no-repeat;
@@ -192,12 +191,15 @@
 		}
 
 		&__menu--nojs {
+			margin-top: -40px;
+			height: auto;
 			display: block;
+			position: static;
 			opacity: 1;
 			visibility: visible;
 			transform: translateX(0);
-			height: auto;
-			position: static;
+			background-image: none;
+			overflow-y: auto;
 		}
 
 		&__nav-list {
