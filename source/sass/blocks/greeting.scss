@@ -28,6 +28,11 @@
 		background-position-x: center;
 		background-position-y: bottom;
 		overflow: hidden;
+
+		@media (min-resolution: $retina-dppx) {
+			background-image: url("../img/promo-video-poster@2x.png");
+			background-size: 100% auto;
+		}
 	}
 
 	&__description {
