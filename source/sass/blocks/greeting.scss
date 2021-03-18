@@ -22,7 +22,7 @@
 	&__inner-right {
 		width: 50%;
 		position: relative;
-		background-image: url("../img/promo-video-poster@1x.png");
+		background-image: url("../img/promo-video-poster@1x.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position-x: center;
@@ -30,8 +30,8 @@
 		overflow: hidden;
 
 		@media (min-resolution: $retina-dppx) {
-			background-image: url("../img/promo-video-poster@2x.png");
-			background-size: 100% auto;
+			background-image: url("../img/promo-video-poster@2x.jpg");
+			background-size: 100vh auto;
 		}
 	}
 
