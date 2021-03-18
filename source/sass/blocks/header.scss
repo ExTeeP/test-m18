@@ -164,13 +164,13 @@
 			left: 0;
 			margin-right: 0;
 			background-color: $color-background-main;
-			background-image: url("../img/bg-menu@1x.png");
+			background-image: url("../img/bg-menu-mobile@1x.png");
 			background-repeat: no-repeat;
 			background-position: bottom right;
 			overflow-y: scroll;
 
 			@media (min-resolution: $retina-dppx) {
-				background-image: url("../img/bg-menu@2x.png");
+				background-image: url("../img/bg-menu-mobile@2x.png");
 				background-size: 500px auto;
 			}
 		}
