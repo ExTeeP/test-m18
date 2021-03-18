@@ -6,4 +6,4 @@
 
 ## Все разработка ведёться в директории `source`
 ## Итоговый код попадает в директорию `build`
-## GH-pages exteep.github.io/test-m18
+### GH-pages [CLICK](https://exteep.github.io/test-m18/docs/)
